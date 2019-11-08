@@ -1,0 +1,11 @@
+@import url(bootstrap.css);
+@import url(bootstrap.min.css);
+
+/* // */
+.image1 {
+  background-image: url("../images/pizza_header.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  font-family: "Gugi", cursive;
+}
