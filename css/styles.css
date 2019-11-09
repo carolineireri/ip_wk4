@@ -1,11 +1,65 @@
 @import url(bootstrap.css);
 @import url(bootstrap.min.css);
 
-/* // */
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  height: auto;
+}
+/* SECTION 1 */
+.container-fluid {
+  margin: inherit;
+  width: inherit;
+}
 .image1 {
   background-image: url("../images/pizza_header.jpg");
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
   font-family: "Gugi", cursive;
+  background-size: 100%;
+  background-attachment: fixed;
 }
+.first-text {
+  background: transparent;
+  font-weight: bold;
+  text-align: center;
+  font-size-adjust: auto;
+  color: white;
+  text-emphasis: bold;
+  padding-top: 50px;
+}
+.first-text h1 {
+  font-size: 80px;
+}
+.first-text p {
+  font-size: 20px;
+}
+.nav {
+  position: absolute;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: right;
+  font-size: 20px;
+  font-style: italic;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: white;
+}
+/* SECTION 2 */
