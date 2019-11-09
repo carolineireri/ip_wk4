@@ -71,3 +71,8 @@ li a:hover {
   text-align: center;
   font-size: 18px;
 }
+/* SECTION 3 */
+.card img {
+  height: 300px;
+  width: 300px;
+}
