@@ -62,7 +62,7 @@ li a:hover {
   background-color: white;
 }
 /* SECTION 2 */
-.section2 {
+.section2,.section3 h1 {
   text-align: center;
   color: black;
 }
