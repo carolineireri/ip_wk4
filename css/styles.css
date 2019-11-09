@@ -76,3 +76,22 @@ li a:hover {
   height: 300px;
   width: 300px;
 }
+/* SECTION 4 */
+form {
+  border-color:black;
+ width:60%;
+  height: 500px;
+  padding:70px;
+  color:white;
+}
+  /* form input {
+    width: 100%;
+    margin: 5px 0;
+} */
+.contacts {
+  background-image:url("../images/bg_1.jpg");
+  background-size:cover;
+}
+.button {
+ padding: 0px 50px 0px 300px;
+}

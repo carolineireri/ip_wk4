@@ -96,31 +96,34 @@
                 </div>
 
             </div>
-            <div class="container-fluid section4">
-        <div class="row">
-            <div class="col-md-12 text" id="about">
+        <div class="container-fluid section4">
+        <div class="row" >
+            <div class="col-md-12 text" id="contact">
                 <h1>Contact Us</h1>
                 <hr />
                 <form class="contacts" action="index.html" method="post" id="contacts">
                         <div class="row">
+                                <div class="col-12">
+                                <p>We love feedback. Please feel free to comment, ask a question by filling the form below.</p>
+                                </div>
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" placeholder="Name..." required><br><br><br>
                                 <span class="error" id="name-error"></span>
                             </div>
                             <div class="col-md-6">
-                                <input id="mail" type="text" class="form-control" name="mail" placeholder="Email..." required>
+                                <input id="email" type="email" class="form-control" name="mail" placeholder="Email..." required>
                                 <span class="form-error" id="mail-error"></span>
                             </div>
                         </div>
             
                         <div class="row">
                             <div class="col-lg">
-                                <textarea type="text" class="form-control" id="message" name="message"
-                                    placeholder="Your message here..." required></textarea><br><br><br>
+                                <textarea type="text" class="form-control" id="message" cols="30" rows="5" name="message"
+                                    placeholder="Comment here..." required></textarea><br><br><br>
                             </div>
-                        </div>
-                        <div class="row">
-                            <input type="submit" id="btn" class="btn-primary float-right" name="button" value="submit">
+                           <div class="col-md-6 button">
+                                    <input class="btn btn-primary" type="submit" value="Submit">
+                           </div>
                         </div>
                     </form><br>
                   </div>
