@@ -37,15 +37,12 @@ function Pizza(type, size, crust) {
     this.estate = estate;
   }
   
-  
-  
-  //crust price
   var crustPrice = {
     crispy: 200,
     stuffed: 200,
     gluten: 150
   };
-  //function calc prize according to size
+  
   function sizeCalcPrice(size) {
     if (size === "small") {
       return sizePrice.small * 1;
@@ -55,7 +52,7 @@ function Pizza(type, size, crust) {
       return sizePrice.large * 1;
     }
   }
-  //price according to crust
+  
   function crustCalcPrice(crust) {
     if (crust === "crispy") {
       return crustPrice.crispy * 1;
@@ -65,7 +62,7 @@ function Pizza(type, size, crust) {
       return crustPrice.gluten * 1;
     }
   }
-  // price according to topping
+  
   function toppingsCalcPrice(toppings) {
     var noOfTopping = 0;
     for (i = 0; i < toppings.length; i++) {
@@ -82,14 +79,14 @@ function Pizza(type, size, crust) {
     return noOfTopping * 1;
   }
   
-  //function check for an element in array
+ 
   function checkBacon(topping) {
     return topping === "bacon";
   }
   
   // *********UI Logic***********//
   $("document").ready(function() {
-    //fetch size of pizza
+   
     function getPizzaType() {
         return $("#pizza-type")
           .find(":selected")
@@ -100,13 +97,13 @@ function Pizza(type, size, crust) {
         .find(":selected")
         .val();
     }
-    //fetch crust of pizza
+    
     function getCrust() {
       return $("#pizza-crust")
         .find(":selected")
         .val();
     }
-    //fetch topping of pizza
+
     function getToppings() {
       var toppingList = [];
       $(".toppings :checked").each(function() {
@@ -115,7 +112,7 @@ function Pizza(type, size, crust) {
       return toppingList;
     }
   
-    //submit event
+    
     $("form#myform").submit(function(event) {
       event.preventDefault();
       var pizzaType = getPizzaType();
@@ -133,7 +130,6 @@ function Pizza(type, size, crust) {
         crustCalcPrice(crust) +
         toppingsCalcPrice(toppingList);
   
-      //append item to the cart when submit event is triggered
       $("#items").append(
                 "<tr>" +
                   "<td>" +
@@ -167,14 +163,14 @@ function Pizza(type, size, crust) {
       return priceOnePizza;
     }
     var pizzaList = [];
-    //what happens when submit button is triggered
+   
     $("#orderbtn").on("click", function() {
       totalQuantity += 1;
       $("#quantity").text(totalQuantity);
       pizzaList.push(calcTotal());
     });
   
-    //display total prize of your order
+    
     $("#gettotal").click(function() {
       var total = 0;
       pizzaList.forEach(function(pizza) {
@@ -183,7 +179,7 @@ function Pizza(type, size, crust) {
       $("#money").text(total);
     });
   
-    //event to trigger location form
+    
     $("#myModel").click(function() {
       var deliver = confirm(
         "Would you like us deliver your order at a cost of ksh 250."
@@ -198,7 +194,7 @@ function Pizza(type, size, crust) {
         $("#no-location").text(calcTotal() * totalQuantity);
         $("#no-delivery").show();
       }
-      //clear form
+     
       $("#pizza-type").val("");
       $("#pizza-size").val("");
       $("#pizza-crust").val("");
