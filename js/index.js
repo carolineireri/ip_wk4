@@ -1,11 +1,11 @@
-//pizza constructor
+//constructor for pizza
 function Pizza(type, size, crust) {
     this.type = type;
     this.size = size;
     this.crust = crust;
     this.toppings = [];
   }
-  //price size
+  //price and size
   var sizePrice = {
     small: 700,
     medium: 900,
@@ -41,7 +41,7 @@ function Location(name, estate) {
     stuffed: 200,
     gluten: 150
   };
-  //function calc prize according to size
+  //function calculate prize according to size
   function sizeCalcPrice(size) {
     if (size === "small") {
       return sizePrice.small * 1;
@@ -79,12 +79,18 @@ function Location(name, estate) {
   }
   
   //function check for an element in array
-  function checkPepperoni(topping) {
+  function checkBacon(topping) {
     return topping === "bacon";
   }
   
   // *********UI Logic***********//
-  $("document").ready(function() {
+  $(document).ready(function() {
+      //fetch type of pizza
+    function getPizzaType() {
+        return $("#pizza-type")
+          .find(":selected")
+          .val();
+      }
     //fetch size of pizza
     function getPizzaSize() {
       return $("#pizza-size")
@@ -109,11 +115,12 @@ function Location(name, estate) {
     //submit event
     $("form#myform").submit(function(event) {
       event.preventDefault();
+      var pizzaType = getPizzaType();
       var pizzaSize = getPizzaSize();
       var crust = getCrust();
       var toppingList = getToppings();
   
-      var newPizza = new Pizza(pizzaSize, crust);
+      var newPizza = new Pizza(pizzaType,pizzaSize, crust);
       newPizza.toppings.push(toppingList);
       $("#cart").hide();
       $("#table").show();
@@ -127,7 +134,12 @@ function Location(name, estate) {
       $("#items").append(
         "<tr>" +
           "<td>" +
+          newPizza.typeize +
+          "</td>" +
+          "<td>" +
+          "<p>" +
           newPizza.size +
+          "</p>" +
           "</td>" +
           "<td>" +
           "<p>" +
@@ -190,5 +202,19 @@ function Location(name, estate) {
       $("#items").remove();
       $("#quantity").text(0);
     });
+  });
+  $("#contacts").submit(function(event) {
+    event.preventDefault();
+    var blanks = ["name", "email", "message"];
+    var input = [];
+    blanks.forEach(function(blank) {
+      input.push($("#" + blank).val());
+    });
+    alert(
+      "Hello!.Thank You " +
+        input[0] +
+        " for reaching out to us. Your message has been received."
+    );
+    $("#contact")[0].reset();
   });
   

@@ -94,7 +94,7 @@
                     </div>
                 </div>
             </div>
-        </div><br><br><br>
+        </div><br><br><br><br><br><br>
 
 
 
@@ -125,9 +125,9 @@
                                 <div class="form-group">
                                         <label for="pizza-type">Type of pizza</label>
                                         <select class="form-control" id="pizza-type">
-                                          <option value="small">Beef BBQ pizza</option>
-                                          <option value="medium">Vegetable pizza</option>
-                                          <option value="large"> Chicken BBQ pizza</option>
+                                          <option value="beef">Beef BBQ pizza</option>
+                                          <option value="vegetable">Vegetable pizza</option>
+                                          <option value="chicken"> Chicken BBQ pizza</option>
                                         </select>
                                       </div>
                           <div class="form-group">
@@ -221,22 +221,23 @@
                         </table>
     
                         <div id="cart">
-                          <img id="cart" src="./images/cart.svg" alt="" />
-                          <p class="text-center pt-4">
-                            Your cart is empty
-                          </p>
-                        </div>
-                        <div id="items"></div>
-                    <a href="#order-section">
-                      <div class="checkout">
-                        <button
-                          class="btn-success btn m-4"
-                          data-toggle="modal"
-                          data-target="#exampleModalCenter"
-                          id="gettotal"
-                        >
-                          Checkout
-                        </button>
+                                <img id="cart" src="./assets/cart.svg" alt="" />
+                                <p class="text-center pt-4">
+                                  You do not have any item in the cart
+                                </p>
+                              </div>
+          
+                              <div id="items"></div>
+                              <a href="#order-section">
+                                <div class="checkout">
+                                  <button
+                                    class="btn-success btn m-4"
+                                    data-toggle="modal"
+                                    data-target="#exampleModalCenter"
+                                    id="gettotal"
+                                  >
+                                    Checkout
+                                  </button>
                       </div>
                       </div>
                     </div>
@@ -313,30 +314,30 @@
 
 
 
-        <div class="row section4" id="contact">
-            <h1>Contact Us</h1>
-            <hr />
-            <form class="contacts" action="index.html" method="post" id="contacts">
-                <div class="col-12">
-                    <p>We love feedback. Please feel free to comment, ask a question by filling the form below.</p>
-                </div>
-                <div class="col-md-6 nm">
-                    <input id="name" type="text" class="form-control" name="name" placeholder="Name..."
-                        required><br><br><br>
-                    <span class="error" id="name-error"></span>
-                </div>
-                <div class="col-md-6 em">
-                    <input id="email" type="email" class="form-control" name="mail" placeholder="Email..." required>
-                    <span class="form-error" id="mail-error"></span>
-                </div>
-                <div class="col-md-12 ms">
-                    <textarea type="text" class="form-control" id="message" cols="30" rows="5" name="message"
-                        placeholder="Comment here..." required></textarea><br><br><br>
-                </div>
-                <div class="col-md-12 button">
-                    <input class="btn btn-primary" type="submit" value="Submit">
-                </div>
-            </form><br>
+            <div class="row section4" id="contact">
+                <h1>Contact Us</h1>
+                <hr />
+                <form class="contacts" action="index.html" method="post" id="contacts">
+                    <div class="col-12">
+                        <p>We love feedback. Please feel free to comment, ask a question by filling the form below.</p>
+                    </div>
+                    <div class="col-md-6 nm">
+                        <input id="name" type="text" class="form-control" name="name" placeholder="Name..."
+                            required><br><br><br>
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="col-md-6 em">
+                        <input id="email" type="email" class="form-control" name="mail" placeholder="Email..." required>
+                        <span class="form-error" id="mail-error"></span>
+                    </div>
+                    <div class="col-md-12 ms">
+                        <textarea type="text" class="form-control" id="message" cols="30" rows="5" name="message"
+                            placeholder="Comment here..." required></textarea><br><br><br>
+                    </div>
+                    <div class="col-md-12 button">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </div>
+                </form><br>
 
         </div><br><br><br><br>
         <div class="row section5">
@@ -351,6 +352,8 @@
             </footer>
             <br><br>
         </div>
+        <script src="./js/jquery-3.3.1.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
         <script src="./js/index.js"></script>
 </body>
 
