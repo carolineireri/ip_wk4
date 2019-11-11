@@ -114,15 +114,9 @@ td {
   display: none;
 }
 /* SECTION 4 */
-.section4 {
-  background-image:url("../images/bg_1.jpg");
-  background-size:cover;
-  color:white;
-  text-align: center;
-  width:60%;
- margin:0 auto;
+.section4 h1 {
+text-align: center;
 }
-/* SECTION 5 */
 /* Style all font awesome icons */
 footer {
   width:18%;
