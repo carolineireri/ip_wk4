@@ -90,11 +90,164 @@
                     </div>
                     <div class="card-body">
                         <img src="./images/chicken.jpg" alt="" />
-                        <p><strong> @1500</strong> </p>
                     </div>
                 </div>
             </div>
         </div><br><br><br>
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div id="order-section"></div>
+                <h1 class="text-center pt-4">Make your order</h1>
+                <div class="alert alert-success mt-2" id="success">
+                  <strong>Thankyou for chosing Yummy Pizzas!</strong> Your order will be delivered to your
+                  location in
+                  <span style="color: red; font-size:18px" id="place" style="color: red"></span> the
+                  Fee for a delivery is ksh 250. Your total amount to be paid is ksh: <span id="finalprice" style="color: red"></span>.
+                </div>
+                <div class="alert alert-success" id="no-delivery">
+                    <strong>Success!</strong>Total amout to pay ksh:  Your order is ready for pickup.  <span id="no-location" style="color: red"></span> Thank you for shopping with us.
+                  </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card">
+                      <card-title>
+                        <h3 class="pt-4 pl-5">Please make your order below</h3>
+                      </card-title>
+                      <div class="card-body">
+                        <form id="myform">
+                                <div class="form-group">
+                                        <label for="pizza-type">Type of pizza</label>
+                                        <select class="form-control" id="pizza-type">
+                                          <option value="small">Beef BBQ pizza</option>
+                                          <option value="medium">Vegetable pizza</option>
+                                          <option value="large"> Chicken BBQ pizza</option>
+                                        </select>
+                                      </div>
+                          <div class="form-group">
+                            <label for="pizza-size">Size of pizza</label>
+                            <select class="form-control" id="pizza-size">
+                              <option value="small">Small--@ksh 700</option>
+                              <option value="medium">Medium--@ksh 900</option>
+                              <option value="large"> Large --@ ksh 1200</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="pizza-crust">Please choose your preferred crust</label>
+                            <select class="form-control" id="pizza-crust">
+                              <option value="crispy">Crispy--@ ksh 200</option>
+                              <option value="stuffed">Stuffed--@ ksh 200</option>
+                              <option value="gluten-free">
+                                Gluten-free--@ ksh 150</option
+                              >
+                            </select>
+                          </div>
+                          <p>Toppings</p>
+                          <div class="toppings">
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="inlineCheckbox1"
+                                value="bacon"
+                              />
+                              <label class="form-check-label" for="inlineCheckbox1"
+                                >Bacon @ ksh 100</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="inlineCheckbox2"
+                                value="mushrooms"
+                              />
+                              <label class="form-check-label" for="inlineCheckbox2"
+                                >mushrooms @ ksh 100</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="inlineCheckbox2"
+                                value="onions"
+                              />
+                              <label class="form-check-label" for="inlineCheckbox2"
+                                >Onion @ ksh 50</label
+                              >
+                            </div>
+                          </div>
+                          <button
+                            type="submit"
+                            class="btn-success btn mt-3"
+                            id="orderbtn"
+                          >
+                            Add Cart
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card mt-1">
+                      <div class="card-title d-inline-flex">
+                        <h3 class="p-4">View items in cart</h3>
+                        <i class="p-4 fa fa-shopping-cart total"
+                          ><button
+                            class="btn-success btn ml-2"
+                            value="0"
+                            id="quantity"
+                          >
+                            0
+                          </button></i
+                        >
+                      </div>
+                      <div class="card-body">
+                        <table id="table">
+                          <tr>
+                            <td>Type</td>
+                            <td>Size</td>
+                            <td>Crust</td>
+                            <td>Toppings</td>
+                            <td>Total Price</td>
+                          </tr>
+                        </table>
+    
+                        <div id="cart">
+                          <img id="cart" src="./assets/cart.svg" alt="" />
+                          <p class="text-center pt-4">
+                            Your cart is empty
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="row section4" id="contact">
             <h1>Contact Us</h1>
             <hr />
