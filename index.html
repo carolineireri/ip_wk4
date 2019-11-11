@@ -199,9 +199,7 @@
                                                 You do not have any item in the cart
                                             </p>
                                         </div>
-
-                                        <div id="items"></div>
-                                        <a href="#order-section">
+    
                                             <div class="checkout">
                                                 <button class="btn-success btn m-4" data-toggle="modal"
                                                     data-target="#exampleModalCenter" id="gettotal">
@@ -244,9 +242,31 @@
             </div>  
          <br><br><br><br>
             <hr>
-            <div class="row section4" id="contact">
+            <div class="row section4" id="contact-us">
                     <h1>Contact Us</h1>
                     <hr />
+                            <form class="contacts" action="index.html" method="post" id="contacts">
+                                <div class="col-12">
+                                    <p>We love feedback. Please feel free to comment, ask a question by filling the form below.</p>
+                                </div>
+                                <div class="col-md-6 nm">
+                                    <input id="name" type="text" class="form-control" name="name" placeholder="Name..."
+                                        required><br><br><br>
+                                    <span class="error" id="name-error"></span>
+                                </div>
+                                <div class="col-md-6 em">
+                                    <input id="email" type="email" class="form-control" name="mail" placeholder="Email..." required>
+                                    <span class="form-error" id="mail-error"></span>
+                                </div>
+                                <div class="col-md-12 ms">
+                                    <textarea type="text" class="form-control" id="message" cols="30" rows="5" name="message"
+                                        placeholder="Comment here..." required></textarea><br><br><br>
+                                </div>
+                                <div class="col-md-12 button">
+                                    <input class="btn btn-primary" type="submit" value="Submit">
+                                </div>
+                            </form><br>
+                    </div>
             <br><br>
             <div class="row">
                 <footer>

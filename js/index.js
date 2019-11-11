@@ -213,7 +213,7 @@ function Location(name, estate) {
       $("#items").remove();
       $("#quantity").text(0);
     });
-    $("#contacts").submit(function(event) {
+    $("#contact-us").submit(function(event) {
         event.preventDefault();
         var blanks = ["name", "email", "message"];
         var input = [];
