@@ -186,11 +186,11 @@ function Pizza(type, size, crust) {
     //event to trigger location form
     $("#myModel").click(function() {
       var deliver = confirm(
-        "Would you like us deliver your pizza to your doorstep? transport cost ksh 150."
+        "Would you like us deliver your order at a cost of ksh 250."
       );
       if (deliver) {
-        var place = prompt("Enter your location");
-        var finalPrice = calcTotal() * totalQuantity + 150;
+        var place = prompt("Please enter your location");
+        var finalPrice = calcTotal() * totalQuantity + 250;
         $("#place").text(place);
         $("#finalprice").text(finalPrice);
         $("#success").show();

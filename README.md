@@ -6,7 +6,10 @@ Caroline Nyambura Ireri
 
 ## Screenshots
 
-
+<img src="images/screenshot1.png">
+<img src="images/screenshot2.png">
+<img src="images/screenshot3.png">
+<img src="images/screenshot4.png">
 
 ## Description
 
@@ -18,17 +21,19 @@ To view this project, please use this live link. https://carolineireri.github.io
 
 ## BDD
 
-| Behavior | Input    | Output   |
-| :------------- | :------------- | :------------- |
-| User Picks the type, size and toppings they prefer | click on the add to cart button  | Pizza is added to cart |
-| User Checkout | Click on checkout button  | A summary of the order is displayed and user confirms checkout|
-| User chooses either delivery or pickup | Enter location details  | User receives alert that their order will be delivered |
+| Behavior                                           | Input                           | Output                                                         |
+| :------------------------------------------------- | :------------------------------ | :------------------------------------------------------------- |
+| User Picks the type, size and toppings they prefer | click on the add to cart button | Pizza is added to cart                                         |
+| User Checkout                                      | Click on checkout button        | A summary of the order is displayed and user confirms checkout |
+| User chooses either delivery or pickup             | Enter location details          | User receives alert that their order will be delivered         |
+
 ## Technologies used
 
 - HTML & CSS (Bootstrap)
 - JavaScript (jQuery 3.4.1)
 - Google fonts
 - FontAwesome icons
+
 ### Setup instructions
 
 - Clone this repository to a location in your file system.
@@ -36,6 +41,7 @@ To view this project, please use this live link. https://carolineireri.github.io
 - Open index.html.
 
 ## Development
+
 If you would wish to contribute to this project, do the following;
 
 - Fork the repository on github
