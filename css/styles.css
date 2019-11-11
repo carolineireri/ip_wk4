@@ -81,6 +81,26 @@ li a:hover {
   margin:0 auto;
   justify-content: center;
 }
+#no-delivery {
+  display: none;
+}
+#success {
+  display: none;
+}
+#table {
+  display: none;
+}
+td {
+  padding: 9px 0 0 10px;
+}
+.total {
+  font-size: 34px;
+  color: #ea5b31;
+}
+.checkout {
+  text-align: center;
+  display: none;
+}
 /* SECTION 4 */
 .section4 {
   background-image:url("../images/bg_1.jpg");
