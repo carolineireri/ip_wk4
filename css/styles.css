@@ -99,8 +99,11 @@ li a:hover {
 #cart {
   text-align: center;
 }
+th {
+  padding: 10px 40px 0px 18px;
+}
 td {
-  padding: 9px 0 0 10px;
+  padding: 10px 40px 0px 12px;
 }
 .total {
   font-size: 34px;

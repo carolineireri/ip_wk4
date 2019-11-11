@@ -13,23 +13,31 @@ function Pizza(type, size, crust) {
   };
   var toppingPrice = [
     {
-      bacon: {
         small: 50,
         medium: 100,
         large: 150
-      },
-      mushrooms: {
-        small: 50,
-        medium: 100,
-        large: 150
-      },
-      onions: {
-        small: 50,
-        medium: 100,
-        large: 150
+     
       }
-    }
   ];
+//   var toppingPrice = [
+//     {
+//       bacon: {
+//         small: 50,
+//         medium: 100,
+//         large: 150
+//       },
+//       mushrooms: {
+//         small: 50,
+//         medium: 100,
+//         large: 150
+//       },
+//       onions: {
+//         small: 50,
+//         medium: 100,
+//         large: 150
+//       }
+//     }
+//   ];
    //location constructor
 function Location(name, estate) {
     this.name = name;
@@ -62,22 +70,24 @@ function Location(name, estate) {
     }
   }
   // price according to topping
+
   function toppingsCalcPrice(toppings) {
     var noOfTopping = 0;
     for (i = 0; i < toppings.length; i++) {
       if (toppings[i] == "bacon") {
-        noOfTopping += 150;
-      }
-      if (toppings[i] == "mushrooms") {
         noOfTopping += 100;
       }
-      if (toppings[i] == "onions") {
+      if (toppings[i] == "mushrooms") {
         noOfTopping += 50;
+      }
+      if (toppings[i] == "onions") {
+        noOfTopping += 75;
       }
     }
     return noOfTopping * 1;
   }
   
+
   //function check for an element in array
   function checkBacon(topping) {
     return topping === "bacon";
@@ -85,6 +95,7 @@ function Location(name, estate) {
   
   // *********UI Logic***********//
   $(document).ready(function() {
+    
       //fetch type of pizza
     function getPizzaType() {
         return $("#pizza-type")
@@ -120,7 +131,7 @@ function Location(name, estate) {
       var crust = getCrust();
       var toppingList = getToppings();
   
-      var newPizza = new Pizza(pizzaType,pizzaSize, crust);
+      var newPizza = new Pizza(pizzaType, pizzaSize, crust);
       newPizza.toppings.push(toppingList);
       $("#cart").hide();
       $("#table").show();
@@ -134,7 +145,7 @@ function Location(name, estate) {
       $("#items").append(
         "<tr>" +
           "<td>" +
-          newPizza.typeize +
+          newPizza.type +
           "</td>" +
           "<td>" +
           "<p>" +
@@ -187,7 +198,7 @@ function Location(name, estate) {
       );
       if (deliver) {
         var place = prompt(" Please enter your location");
-        var finalPrice = calcTotal() * totalQuantity + 150;
+        var finalPrice = calcTotal() * totalQuantity + 250;
         $("#place").text(place);
         $("#finalprice").text(finalPrice);
         $("#success").show();
@@ -202,19 +213,20 @@ function Location(name, estate) {
       $("#items").remove();
       $("#quantity").text(0);
     });
-  });
-  $("#contacts").submit(function(event) {
-    event.preventDefault();
-    var blanks = ["name", "email", "message"];
-    var input = [];
-    blanks.forEach(function(blank) {
-      input.push($("#" + blank).val());
-    });
-    alert(
-      "Hello!.Thank You " +
-        input[0] +
-        " for reaching out to us. Your message has been received."
-    );
-    $("#contact")[0].reset();
+    $("#contacts").submit(function(event) {
+        event.preventDefault();
+        var blanks = ["name", "email", "message"];
+        var input = [];
+        blanks.forEach(function(blank) {
+          input.push($("#" + blank).val());
+        });
+        alert(
+          "Hello!.Thank You " +
+            input[0] +
+            " for reaching out to us. Your message has been received."
+        );
+        $("#contact")[0].reset();
+      });
+      
   });
   
